@@ -22,11 +22,12 @@ Dla innego skalowania również niewiele się zmienia - wykres na `analytical_mm
 Raczej wszystko tu działa - następnym zadaniem będzie zaimplementowanie gradientu.
 
 # 21.03
+## gradient
 Napisałem 3 wersje gradientu.
 
 Napotkałem błąd, w którym wartość theta wystrzeliwała do NaN bardzo szybko.\
 
-Po debugowaniu okazało się że dane nie są skalowane (byłem przekonany że są). Dowiedziałem się przy tym, że rozwiązanie analityczne działa poprawnie bez skalowania.
+Po debugowaniu okazało się że dane nie są skalowane (byłem przekonany że są). Po około 100 iteracjach wartości w theta wyskakiwały do nieskończoności. Dowiedziałem się przy tym, że rozwiązanie analityczne działa poprawnie bez skalowania.
 
 W gradiencie jako warunek stopu wykorzystałem liczbę iteracji - mogę obserwować jak zachowuje się wykres w zależności od l. iteracji, theta inicjalizuję zerami.
 
@@ -45,3 +46,13 @@ Po doświadczeniu zacząłem inicjalizować theta wartościami losowymi - nie wp
 
 Przekształciłem walidację na osobne funkcje i zacząłem wyznaczanie krzywej uczenia.\
 Dla podstawowej konfiguracji (60/20/20, standaryzacja, błąd kwadratowy, regresja grzbietowa, gradient) krzywa uczenia znajduje się w pliku `default_curve.png`
+
+Przetestowałem krzywą uczenia dla różnych konfiguracji, ale nie będę na ten moment załączał.
+
+Brakuje mi jedynie komponentu funkcji bazowych.
+
+## funkcje bazowe
+
+Utworzyłem proste funkcje bazowe - podniesienie wszystkich wartości do kwadratu, iloczyn, funkcja wykładnicza (sam exp od wszystkich wartości jest bardzo czułu na niektóre wartości - konkretnie na pełnym zbiorze błąd jest gigantyczny - `exp.png`)
+
+Z kolei na funkcji x->exp(-x^2) wychodzi ładna krzywa uczenia - `exp_sqr.png`
