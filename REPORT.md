@@ -43,4 +43,5 @@ Wniosek z obserwacji: nie potrzeba ogromnej liczby iteracji żeby dostać dobre 
 
 Po doświadczeniu zacząłem inicjalizować theta wartościami losowymi - nie wpłynęło to znacznie na wynik, ale obiektywnie losowa inicjalizacja jest lepsza więc ją zostawię.
 
-Przekształciłem 
+Przekształciłem walidację na osobne funkcje i zacząłem wyznaczanie krzywej uczenia.\
+Dla podstawowej konfiguracji (60/20/20, standaryzacja, błąd kwadratowy, regresja grzbietowa, gradient) krzywa uczenia znajduje się w pliku `default_curve.png`
