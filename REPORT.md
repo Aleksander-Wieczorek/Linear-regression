@@ -56,3 +56,9 @@ Brakuje mi jedynie komponentu funkcji bazowych.
 Utworzyłem proste funkcje bazowe - podniesienie wszystkich wartości do kwadratu, iloczyn, funkcja wykładnicza (sam exp od wszystkich wartości jest bardzo czułu na niektóre wartości - konkretnie na pełnym zbiorze błąd jest gigantyczny - `exp.png`)
 
 Z kolei na funkcji x->exp(-x^2) wychodzi ładna krzywa uczenia - `exp_sqr.png`
+
+# 29.03
+
+## poprawki:
+
+Z powodu skrajnie głupiego błędu model nie działał. W funkcji walidacyjnej przekazywałem zbiór walidacyjny zamiast testowego, więc liczyłem gradient na zbiorze walidacyjnym. Od teraz błąd jest znacznie mniejszy.
