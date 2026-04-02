@@ -61,4 +61,15 @@ Z kolei na funkcji x->exp(-x^2) wychodzi ładna krzywa uczenia - `exp_sqr.png`
 
 ## poprawki:
 
-Z powodu skrajnie głupiego błędu model nie działał. W funkcji walidacyjnej przekazywałem zbiór walidacyjny zamiast testowego, więc liczyłem gradient na zbiorze walidacyjnym. Od teraz błąd jest znacznie mniejszy.
+Z powodu skrajnie głupiego błędu model nie działał. W funkcji walidacyjnej przekazywałem zbiór walidacyjny zamiast treningowego, więc liczyłem gradient na zbiorze walidacyjnym.
+
+---
+O dziwo wyniki złego modelu nie były bardzo inne od tych poprawnie wyliczonych, więc poprzednie wyniki mogą coś znaczyć
+
+# 2.04
+
+## podsumowanie
+Przez to, że mam dużo konfiguracji zmieniłem logikę walidacji - teraz mam **tablicę konfiguracji**. Walidacja dopasowuje model do *kilku* różnych funkcji bazowych o różnych parametrach.\
+Z góry narzucam tylko skalowanie, funkcję straty i regularyzację. Dodatkowo dzięki temu mogę porównywać która funkcja pasuje do modelu, skalowania etc..
+
+### Reszta opisu będzie już w finalnym raporcie
